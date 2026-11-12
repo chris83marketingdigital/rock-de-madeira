@@ -29,7 +29,6 @@ body {
   position: relative;
 }
 
-/* Fundo Geral Fixo com a Imagem da Capa */
 body::before {
   content: "";
   position: fixed;
@@ -52,7 +51,7 @@ body::before {
 
 .section-title {
   font-family: var(--font-title);
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
   text-align: center;
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
@@ -71,8 +70,9 @@ body::before {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.8rem;
+  padding: 0.85rem 1.5rem;
   border-radius: 4px;
   font-weight: 700;
   font-size: 0.9rem;
@@ -82,6 +82,7 @@ body::before {
   cursor: pointer;
   border: 1px solid transparent;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .btn-primary {
@@ -108,7 +109,6 @@ body::before {
   transform: translateY(-2px);
 }
 
-/* Cabeçalho */
 header {
   position: fixed;
   top: 0;
@@ -168,7 +168,6 @@ nav {
   transform: translateY(-2px);
 }
 
-/* Hero Principal */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -224,7 +223,7 @@ nav {
 .hero h2 {
   color: var(--wood-gold);
   font-family: var(--font-title);
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 5vw, 2rem);
   margin-bottom: 1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -264,86 +263,132 @@ nav {
   border-color: var(--wood-primary);
 }
 
-/* Seções Gerais */
 section {
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 
-.video-section {
-  background: rgba(14, 10, 8, 0.7);
-  backdrop-filter: blur(8px);
+.highlight-section {
+  padding: 2rem 0;
 }
 
-/* ========================================= */
-/* NOVAS CLASSES DO TEASER / CURIOSIDADE     */
-/* ========================================= */
-.teaser-wrapper {
+.highlight-banner {
   position: relative;
-  padding: 5rem 2rem;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(to right, rgba(14, 10, 8, 0.96) 10%, rgba(14, 10, 8, 0.6) 100%),
+              url('https://img.youtube.com/vi/uWnWSRVr7n4/maxresdefault.jpg') center/cover no-repeat;
   border: 1px solid var(--border-subtle);
-  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+  padding: 2.5rem 2rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  /* Capa do álbum escurecida ao fundo */
-  background: linear-gradient(rgba(14, 10, 8, 0.85), rgba(14, 10, 8, 0.95)), url('Capa_album.jpeg') center/cover no-repeat;
 }
 
-.teaser-content {
+.highlight-content {
+  max-width: 650px;
   position: relative;
   z-index: 2;
-  max-width: 600px;
 }
 
-.teaser-icon {
-  font-size: 3rem;
-  color: var(--wood-gold);
-  margin-bottom: 1.5rem;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.1); opacity: 0.6; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.teaser-content h3 {
+.highlight-content h2 {
   font-family: var(--font-title);
-  font-size: 1.5rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   color: var(--text-main);
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  letter-spacing: 2px;
+}
+
+.feat-text {
+  color: var(--wood-gold);
+  font-family: var(--font-title);
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  margin-bottom: 1rem;
   letter-spacing: 1px;
 }
 
-.teaser-date {
-  font-family: var(--font-title);
-  font-size: 3.2rem;
-  color: var(--wood-primary);
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 0 4px 20px rgba(209, 73, 30, 0.5);
-}
-
-.teaser-content p {
+.highlight-desc {
+  font-size: 0.95rem;
   color: var(--text-muted);
-  margin-bottom: 2rem;
-  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
-.teaser-socials {
+.streaming-alert, .video-alert {
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.8rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.streaming-alert i { color: #1DB954; } 
+.video-alert i { color: #FF0000; font-size: 1.2rem; }
+.video-alert strong { color: var(--wood-primary); }
+
+.highlight-actions {
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 
-/* Seção Músicas */
+.spotify-btn:hover { background: #1DB954; color: #191414; border-color: #1DB954; }
+.deezer-btn:hover { background: #ef5466; color: #fff; border-color: #ef5466; }
+
+.highlight-divider {
+  border: none;
+  border-top: 1px solid rgba(243, 156, 18, 0.2);
+  margin: 0 0 1.5rem 0;
+  width: 80%;
+}
+
+.gallery-section {
+  background: rgba(14, 10, 8, 0.4);
+  padding: 4rem 0;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.video-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.video-card:hover {
+  border-color: var(--wood-primary);
+  transform: translateY(-5px);
+}
+
+.video-card iframe {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  display: block;
+}
+
+.video-card h4 {
+  padding: 1.2rem;
+  font-family: var(--font-title);
+  color: var(--wood-gold);
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
 .tracks-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -416,7 +461,6 @@ section {
   color: var(--wood-primary);
 }
 
-/* Sobre a Banda */
 .about-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -438,70 +482,6 @@ section {
   font-size: 1.05rem;
 }
 
-/* Shows e Contato (Ocultos no HTML, mas mantidos no CSS) */
-.shows-section {
-  background: rgba(14, 10, 8, 0.7);
-}
-
-.show-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.show-date {
-  font-family: var(--font-title);
-  font-size: 1.4rem;
-  color: var(--wood-gold);
-  min-width: 140px;
-}
-
-.contact-container {
-  max-width: 600px;
-  margin: 0 auto;
-  background: var(--bg-card);
-  padding: 2.5rem;
-  border-radius: 6px;
-  border: 1px solid var(--border-subtle);
-  backdrop-filter: blur(10px);
-}
-
-.form-group {
-  margin-bottom: 1.2rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.form-control {
-  width: 100%;
-  padding: 0.85rem;
-  background: rgba(14, 10, 8, 0.8);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-main);
-  border-radius: 4px;
-  font-family: var(--font-body);
-  outline: none;
-  transition: var(--transition);
-}
-
-.form-control:focus {
-  border-color: var(--wood-primary);
-}
-
-textarea.form-control {
-  resize: vertical;
-  min-height: 120px;
-}
-
 footer {
   padding: 3rem 0;
   text-align: center;
@@ -514,7 +494,8 @@ footer p {
   font-size: 0.85rem;
 }
 
-@media (max-width: 900px) {
+/* Responsividade Mobile */
+@media (max-width: 768px) {
   nav {
     justify-content: center;
   }
@@ -534,144 +515,29 @@ footer p {
   .hero-actions {
     justify-content: center;
   }
-  .show-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-}
-
-/* ========================================= */
-/* ESTILOS DO NOVO DESTAQUE E GALERIA        */
-/* ========================================= */
-
-/* Banner de Lançamento */
-.highlight-section {
-  padding: 4rem 0 2rem 0;
-}
-
-.highlight-banner {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  /* O CSS abaixo busca automaticamente a capa (thumbnail) oficial do seu vídeo no YouTube (ID: uWnWSRVr7n4) */
-  background: linear-gradient(to right, rgba(14, 10, 8, 0.96) 10%, rgba(14, 10, 8, 0.6) 100%),
-              url('https://img.youtube.com/vi/uWnWSRVr7n4/maxresdefault.jpg') center/cover no-repeat;
-  border: 1px solid var(--border-subtle);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
-  padding: 4rem 3rem;
-  display: flex;
-  align-items: center;
-}
-
-.highlight-content {
-  max-width: 650px;
-  position: relative;
-  z-index: 2;
-}
-
-.highlight-content h2 {
-  font-family: var(--font-title);
-  font-size: 3rem;
-  color: var(--text-main);
-  margin-top: 0.5rem;
-  margin-bottom: 0.2rem;
-  letter-spacing: 2px;
-}
-
-.feat-text {
-  color: var(--wood-gold);
-  font-family: var(--font-title);
-  font-size: 1.1rem;
-  margin-bottom: 1.2rem;
-  letter-spacing: 1px;
-}
-
-.highlight-desc {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  margin-bottom: 2.5rem;
-}
-
-.streaming-alert, .video-alert {
-  font-weight: 600;
-  color: var(--text-main);
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.streaming-alert i { color: #1DB954; } 
-.video-alert i { color: #FF0000; font-size: 1.2rem; }
-.video-alert strong { color: var(--wood-primary); }
-
-.highlight-actions {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-  flex-wrap: wrap;
-}
-
-/* Cores específicas para os botões de streaming no hover */
-.spotify-btn:hover { background: #1DB954; color: #191414; border-color: #1DB954; }
-.deezer-btn:hover { background: #ef5466; color: #fff; border-color: #ef5466; }
-
-.highlight-divider {
-  border: none;
-  border-top: 1px solid rgba(243, 156, 18, 0.2);
-  margin: 0 0 2rem 0;
-  width: 80%;
-}
-
-/* Galeria de Clipes */
-.gallery-section {
-  background: rgba(14, 10, 8, 0.4);
-  padding: 4rem 0 6rem 0;
-}
-
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.video-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: var(--transition);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-}
-
-.video-card:hover {
-  border-color: var(--wood-primary);
-  transform: translateY(-5px);
-}
-
-.video-card iframe {
-  width: 100%;
-  aspect-ratio: 16/9;
-  border: none;
-  display: block;
-}
-
-.video-card h4 {
-  padding: 1.2rem;
-  font-family: var(--font-title);
-  color: var(--wood-gold);
-  text-align: center;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-}
-
-@media (max-width: 768px) {
+  
+  /* Ajustes específicos para evitar quebra no celular */
   .highlight-banner {
-    padding: 2.5rem 1.5rem;
+    padding: 1.8rem 1.2rem;
+    text-align: center;
   }
-  .highlight-content h2 {
-    font-size: 2.2rem;
+  .highlight-divider {
+    margin: 0 auto 1.5rem auto;
+    width: 100%;
+  }
+  .highlight-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+  
+  /* Forçar os grids de vídeos para 1 coluna no celular */
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+  .tracks-grid {
+    grid-template-columns: 1fr;
   }
 }
