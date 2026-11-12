@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock de Madeira | Paz à Venda</title>
+
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Arquivo CSS Externo -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Navegação -->
+  <header>
+    <div class="container">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#clipe">Clipe</a></li>
+          <li><a href="#musicas">Álbum</a></li>
+          <li><a href="#sobre">A Banda</a></li>
+          <li><a href="#agenda">Shows</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+
+        <div class="social-icons">
+          <!-- YouTube -->
+          <a href="https://youtube.com/channel/UCyPyRe2gOdiVCWHaoFFbyZA?si=RtB__6t0sGKhJHD3" target="_blank" rel="noopener noreferrer" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+
+          <!-- Spotify -->
+          <a href="https://open.spotify.com/intl-pt/artist/3kn64zrdgh2JTo4lEvzzUw?si=uWfbPj2nTmaMHmrMuVRrug" target="_blank" rel="noopener noreferrer" title="Spotify">
+            <i class="fa-brands fa-spotify"></i>
+          </a>
+
+          <!-- Deezer -->
+          <a href="https://link.deezer.com/s/34IMFJokpfRbMtTmSDGw3" target="_blank" rel="noopener noreferrer" title="Deezer">
+            <i class="fa-brands fa-deezer"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/rockdemadeira" target="_blank" rel="noopener noreferrer" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero com Logotipo e Capa do Álbum na Lateral -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <!-- Logotipo oficial no lugar do título de texto -->
+          <div class="hero-logo-wrapper">
+            <img 
+              src="./logo.png" 
+              alt="Rock de Madeira" 
+            />
+          </div>
+
+          <!-- Tag Novo Álbum encaixada abaixo da cauda da logo -->
+          <span class="badge">Novo Álbum</span>
+
+          <h2>Paz à Venda</h2>
+
+          <p>
+            Uma crítica direta com a força e a profundeza dos instrumentos acústicos. Ouça o álbum completo e assista ao clipe oficial de "Pés no chão".
+          </p>
+
+          <div class="hero-actions">
+            <a href="#clipe" class="btn btn-primary">
+              <i class="fa-solid fa-play"></i> Assistir ao Clipe
+            </a>
+            <!-- Link do Spotify oficial na Playlist Completa -->
+            <a href="https://open.spotify.com/intl-pt/artist/3kn64zrdgh2JTo4lEvzzUw?si=uWfbPj2nTmaMHmrMuVRrug" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <i class="fa-brands fa-spotify"></i> Ouvir Playlist Completa
+            </a>
+          </div>
+        </div>
+
+        <!-- Capa do Álbum na Lateral Direita -->
+        <div class="hero-cover-card">
+          <img src="Capa_album.jpeg" alt="Capa do Álbum Paz à Venda - Rock de Madeira" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Clipe (Vídeo -> YouTube) -->
+  <section id="clipe" class="video-section">
+    <div class="container">
+      <h2 class="section-title">CLIPE OFICIAL</h2>
+      <p class="section-subtitle">Pés no Chão • Gravado na Ilha da Gipóia</p>
+
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/ifROoUtDWbY" title="Rock De Madeira - Pés no chão"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Músicas (Áudio -> Spotify / Vídeo -> YouTube) -->
+  <section id="musicas">
+    <div class="container">
+      <h2 class="section-title">PAZ À VENDA</h2>
+      <p class="section-subtitle">Faixas do Álbum</p>
+
+      <div class="tracks-grid">
+        <!-- Faixa 1 (Vídeo / Clipe no YouTube) -->
+        <div class="track-card">
+          <div>
+            <div class="track-header">
+              <div class="track-icon"><i class="fa-solid fa-play"></i></div>
+              <div>
+                <h4 class="track-title">Pés no chão</h4>
+                <span class="track-type">Single & Clipe</span>
+              </div>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              "Triste pensamento a toda hora, triste estar longe de você..."
+            </p>
+          </div>
+          <a href="https://www.youtube.com/watch?v=ifROoUtDWbY" target="_blank" rel="noopener noreferrer" class="track-link">
+            Assistir clipe <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Faixa 2 (Áudio no Spotify) -->
+        <div class="track-card">
+          <div>
+            <div class="track-header">
+              <div class="track-icon"><i class="fa-brands fa-spotify"></i></div>
+              <div>
+                <h4 class="track-title">Marte</h4>
+                <span class="track-type">Faixa Original</span>
+              </div>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              Dinâmica acústica, cordas marcantes e atmosfera reflexiva.
+            </p>
+          </div>
+          <a href="https://open.spotify.com/intl-pt/artist/3kn64zrdgh2JTo4lEvzzUw?si=uWfbPj2nTmaMHmrMuVRrug" target="_blank" rel="noopener noreferrer" class="track-link">
+            Ouvir no Spotify <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Faixa 3 (Áudio no Spotify) -->
+        <div class="track-card">
+          <div>
+            <div class="track-header">
+              <div class="track-icon"><i class="fa-brands fa-spotify"></i></div>
+              <div>
+                <h4 class="track-title">A forma alterada</h4>
+                <span class="track-type">Faixa Original</span>
+              </div>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              Linha de baixo acústico encorpada e poesia urbana.
+            </p>
+          </div>
+          <a href="https://open.spotify.com/intl-pt/artist/3kn64zrdgh2JTo4lEvzzUw?si=uWfbPj2nTmaMHmrMuVRrug" target="_blank" rel="noopener noreferrer" class="track-link">
+            Ouvir no Spotify <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Faixa 4 (Áudio no Spotify) -->
+        <div class="track-card">
+          <div>
+            <div class="track-header">
+              <div class="track-icon"><i class="fa-brands fa-spotify"></i></div>
+              <div>
+                <h4 class="track-title">Vá embora</h4>
+                <span class="track-type">Bônus • part. Rui Reis</span>
+              </div>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              Participação especial com arranjos intimistas e melódicos.
+            </p>
+          </div>
+          <a href="https://open.spotify.com/intl-pt/artist/3kn64zrdgh2JTo4lEvzzUw?si=uWfbPj2nTmaMHmrMuVRrug" target="_blank" rel="noopener noreferrer" class="track-link">
+            Ouvir no Spotify <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre a Banda -->
+  <section id="sobre">
+    <div class="container">
+      <div class="about-card">
+        <span class="badge">Conceito & Obra</span>
+        <h3>O Rock Acústico com Mensagem</h3>
+        <p>
+          O <strong>Rock de Madeira</strong> une a rusticidade e a vibração dos instrumentos feitos de madeira à
+          eletricidade de letras contundentes e reflexivas.
+        </p>
+        <p>
+          Em <em>Paz à Venda</em>, a banda contrapõe a beleza natural do litoral caiçara com a inquietação política e
+          social retratada na arte de capa, provando que o som acústico pode ser tão visceral e crítico quanto qualquer
+          distorção.
+        </p>
+       <!-- <a href="#contato" class="btn btn-outline" style="margin-top: 1rem;">
+          Solicitar Release & Rider Técnico
+        </a>
+      </div>
+    </div>
+  </section>
+
+   Agenda 
+  <section id="agenda" class="shows-section">
+    <div class="container">
+      <h2 class="section-title">SHOWS & TURNÊ</h2>
+      <p class="section-subtitle">Próximas Datas</p>
+
+      <div class="shows-list">
+        <div class="show-row">
+          <div class="show-date">EM BREVE</div>
+          <div class="show-info">
+            <h4>Turnê "Paz à Venda"</h4>
+            <p>Apresentações no Rio de Janeiro e região litorânea</p>
+          </div>
+          <a href="#contato" class="btn btn-outline">Avise-me</a>
+        </div>
+
+        <div class="show-row">
+          <div class="show-date">CONTRATAÇÃO</div>
+          <div class="show-info">
+            <h4>Festivais, Teatros e Casas de Show</h4>
+            <p>Formato acústico plugado ou intimista</p>
+          </div>
+          <a href="#contato" class="btn btn-primary">Fazer Proposta</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      Contato 
+  <section id="contato">
+    <div class="container">
+      <h2 class="section-title">CONTATO & BOOKING</h2>
+      <p class="section-subtitle">Direto com a produção</p>
+
+      <div class="contact-container">
+        <form>
+          <div class="form-group">
+            <label for="nome">Nome / Produtora</label>
+            <input type="text" id="nome" class="form-control" placeholder="Seu nome ou empresa" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" class="form-control" placeholder="exemplo@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem / Proposta</label>
+            <textarea id="mensagem" class="form-control"
+              placeholder="Descreva sua proposta de show ou dúvida..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            <i class="fa-regular fa-paper-plane"></i> Enviar Mensagem
+          </button>
+        </form>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Rock de Madeira • Álbum "Paz à Venda". Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Arquivo JavaScript Externo -->
+  <script src="script.js"></script>
+</body>
+
+</html>
